@@ -1,0 +1,86 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  margin: 10px 0 20px 0;
+  height: 300px;
+  box-shadow: 0 1px 1px rgba(0,0,0,0.10),0 1px 2px rgba(0,0,0,0.20);
+  transition: all 0.3s cubic-bezier(0.25,0.8,0.25,1);
+
+  &:hover {
+    box-shadow: 0 0px 20px rgba(0,0,0,0.20), 0 10px 10px rgba(0,0,0,0.20);
+
+    .info-holder .job-company{
+      padding-bottom: 10px;
+    }
+    .info-holder .info--hidden{
+      display: block;
+    }
+  }
+}
+
+.profile-img-holder {
+  height:185px;
+  overflow:hidden;
+
+  img {
+    width: 100%;
+    padding: 10px;
+  }
+}
+
+.info-holder{
+  position: relative;
+
+  .icon-holder {
+    top: -35px;
+    margin-bottom: -30px;
+
+    img {
+      width: 70px;
+      height: 70px;
+      max-width: 70px;
+      max-height: 70px;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      border-radius: 50%;
+      border: 2px solid rgba(255,255,255,0.5);
+      background-color: rgba(255,255,255,0.8);
+    }
+  }
+
+  .info{
+    padding: 10px;
+
+    .name{
+      margin-bottom: 0;
+    }
+
+    .info--hidden{
+      display: none;
+    }
+
+  }
+}
+
+/*media queries*/
+
+@media screen and (max-width: 992px) {
+  .card{
+    height:370px;
+
+    .profile-img-holder{
+      height:240px;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .card{
+    height:550px;
+
+    .profile-img-holder{
+      height:auto;
+    }
+  }
+}

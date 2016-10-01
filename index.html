@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Contact App</title>
+	<link rel="stylesheet" type="text/css" href="node_modules/bootstrap-css-only/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/application.css">
+
+</head>
+<body ng-app="app.contactList">
+
+<!-- Nav -->
+<nav class="navbar navbar-default navbar-fixed-top">
+	<div class="container container-padding">
+		<row>
+			<div class="navbar-header navbar-left col-xs-6">
+				<h3>Contact List</h3>
+			</div>
+			<form class="navbar-form navbar-right col-xs-6">
+				<div class="form-group search-custom">
+					<input type="text" class="form-control" placeholder="Search..." ng-model="contactName">
+				</div>
+			</form>
+		</row>
+	</div>
+</nav>
+<!-- End Nav -->
+
+<!-- Contacts -->
+<article class="container" role="main">
+	<div class="row row-padding-top" ng-controller="ContactController as contact">
+		<contact-card class="col-xs-12 col-sm-6 col-md-3"
+					  contact-item="contactItem"
+					  ng-repeat="contactItem in contact.contactItems | filter: {name:contactName}">
+		</contact-card>
+	</div>
+</article>
+<!-- End Contacts -->
+
+<!-- Scripts -->
+<script type="text/javascript" src="node_modules/angular/angular.js"></script>
+<script type="text/javascript" src="app/app.module.js"></script>
+<script type="text/javascript" src="app/components/contact-card/contact-card.service.js"></script>
+<script type="text/javascript" src="app/components/contact-card/contact-card.controller.js"></script>
+<script type="text/javascript" src="app/components/contact-card/contact-card.directive.js"></script>
+<!-- End Scripts -->
+
+</body>
+</html>

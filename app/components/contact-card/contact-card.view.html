@@ -1,0 +1,16 @@
+<div class="card">
+	<div class="profile-img-holder">
+		<img ng-src="{{contactItem.profile_image}}">
+	</div>
+	<div class="info-holder">
+		<div class="icon-holder col-xs-12">
+			<img class="pull-left" ng-src="{{contactItem.icon}}">
+		</div>
+		<div class="info">
+			<h4  class="name">{{contactItem.name}}</h4>
+			<div class="job-company">{{contactItem.job}} | {{contactItem.company_name}}</div>
+			<div class="info--hidden">{{contactItem.email}}</div>
+			<div class="info--hidden">{{contactItem.phone}}</div>
+		</div>
+	</div>
+</div>
