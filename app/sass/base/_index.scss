@@ -5,6 +5,14 @@ html {
 
 body {
   background-color: #F0F0F0;
+
+  @include respond-to(max-width, $desktop) {
+    font-size: 1.5em;
+  }
+
+  @include respond-to(max-width, $tablet) {
+    font-size: 2em;
+  }
 }
 
 .container-padding{
@@ -25,26 +33,14 @@ body {
 
     input[type=text]{
       width:430px;
+
+      @include respond-to(max-width, $desktop) {
+        width:330px;
+      }
+
+      @include respond-to(max-width, $tablet) {
+        width:auto;
+      }
     }
   }
-}
-
-/*media queries*/
-
-@media screen and (max-width: 992px) {
-body {
-  font-size: 1.5em;
-}
-.navbar-form input[type=text]{
-  width:330px;
-}
-}
-
-@media screen and (max-width: 767px) {
-body {
-  font-size: 2em;
-}
-.navbar-form input[type=text]{
-  width:auto;
-}
 }

@@ -1,0 +1,9 @@
+$phone: 320px;
+$tablet: 767px;
+$desktop: 992px;
+
+@mixin respond-to($val, $query) {
+  @media screen and ($val: $query) {
+    @content
+  }
+}
