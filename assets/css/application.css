@@ -32,8 +32,6 @@ body {
           width: auto; } }
 
 .card {
-  display: flex;
-  flex-direction: column;
   background-color: #fff;
   margin: 10px 0 20px 0;
   height: 300px;
@@ -45,15 +43,14 @@ body {
       padding-bottom: 10px; }
     .card:hover .info-holder .info--hidden {
       display: block; }
+    .card:hover .info-holder {
+      top: -50px; }
   @media screen and (max-width: 992px) {
     .card {
       height: 370px; } }
   @media screen and (max-width: 767px) {
     .card {
-      height: 550px; } }
-  @media screen and (max-width: 320px) {
-    .card {
-      height: 400px; } }
+      height: auto; } }
 
 .profile-img-holder {
   height: 185px;
@@ -69,7 +66,8 @@ body {
       height: auto; } }
 
 .info-holder {
-  position: relative; }
+  position: relative;
+  background-color: #ffffff; }
   .info-holder .icon-holder {
     top: -35px;
     margin-bottom: -30px; }

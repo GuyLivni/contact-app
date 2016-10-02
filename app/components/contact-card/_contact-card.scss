@@ -1,6 +1,4 @@
 .card {
-  display: flex;
-  flex-direction: column;
   background-color: #fff;
   margin: 10px 0 20px 0;
   height: 300px;
@@ -16,6 +14,10 @@
     .info-holder .info--hidden{
       display: block;
     }
+
+    .info-holder{
+      top: -50px;
+    }
   }
 
   @include respond-to(max-width, $desktop) {
@@ -23,11 +25,7 @@
   }
 
   @include respond-to(max-width, $tablet) {
-    height:550px;
-  }
-
-  @include respond-to(max-width, $phone) {
-    height:400px;
+    height:auto;
   }
 }
 
@@ -51,6 +49,7 @@
 
 .info-holder{
   position: relative;
+  background-color: #ffffff;
 
   .icon-holder {
     top: -35px;
