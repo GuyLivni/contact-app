@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('app.contactList')
+        .module('app.contactCard')
         .directive('contactCard', contactCard);
 
     function contactCard() {

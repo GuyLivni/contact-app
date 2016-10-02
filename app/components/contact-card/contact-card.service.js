@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('app.contactList')
+        .module('app.contactCard')
         .factory('contacts', contacts);
 
     function contacts($http) {

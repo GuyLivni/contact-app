@@ -9,7 +9,7 @@
 	<link rel="stylesheet" type="text/css" href="assets/css/application.css">
 
 </head>
-<body ng-app="app.contactList">
+<body ng-app="app">
 
 <!-- Nav -->
 <nav class="navbar navbar-default navbar-fixed-top">
@@ -39,13 +39,22 @@
 </article>
 <!-- End Contacts -->
 
-<!-- Scripts -->
+<!-- inject-vendor:js -->
 <script type="text/javascript" src="node_modules/angular/angular.js"></script>
+<!-- endinject -->
+
+
+<!-- inject:js -->
+<!-- Bootstrapping -->
 <script type="text/javascript" src="app/app.module.js"></script>
+
+
+<!-- contact-card component -->
+<script type="text/javascript" src="app/components/contact-card/contact-card.module.js"></script>
 <script type="text/javascript" src="app/components/contact-card/contact-card.service.js"></script>
 <script type="text/javascript" src="app/components/contact-card/contact-card.controller.js"></script>
 <script type="text/javascript" src="app/components/contact-card/contact-card.directive.js"></script>
-<!-- End Scripts -->
+<!-- endinject -->
 
 </body>
 </html>

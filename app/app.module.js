@@ -2,5 +2,7 @@
     'use strict';
 
     angular
-        .module('app.contactList', []);
+        .module('app', [
+            'app.contactCard'
+        ]);
 })();
