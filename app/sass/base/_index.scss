@@ -5,13 +5,14 @@ html {
 
 body {
   background-color: #F0F0F0;
+  font-size: 2em;
 
-  @include respond-to(max-width, $desktop) {
+  @include respond-to($small-device) {
     font-size: 1.5em;
   }
 
-  @include respond-to(max-width, $tablet) {
-    font-size: 2em;
+  @include respond-to($medium-device) {
+    font-size: 14px;
   }
 }
 
@@ -32,14 +33,14 @@ body {
     border: none;
 
     input[type=text]{
-      width:430px;
+      width: auto;
 
-      @include respond-to(max-width, $desktop) {
-        width:330px;
+      @include respond-to($small-device) {
+        width: 330px;
       }
 
-      @include respond-to(max-width, $tablet) {
-        width:auto;
+      @include respond-to($medium-device) {
+        width: 430px;
       }
     }
   }

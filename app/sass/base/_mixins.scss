@@ -1,9 +1,8 @@
-$phone: 320px;
-$tablet: 767px;
-$desktop: 992px;
+$small-device:  768px;
+$medium-device: 992px;
 
-@mixin respond-to($val, $query) {
-  @media screen and ($val: $query) {
-    @content
+@mixin respond-to($val) {
+  @media only screen and (min-width: $val) {
+    @content;
   }
 }

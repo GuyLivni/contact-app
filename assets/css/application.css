@@ -3,13 +3,14 @@ html {
   min-height: 100%; }
 
 body {
-  background-color: #F0F0F0; }
-  @media screen and (max-width: 992px) {
+  background-color: #F0F0F0;
+  font-size: 2em; }
+  @media only screen and (min-width: 768px) {
     body {
       font-size: 1.5em; } }
-  @media screen and (max-width: 767px) {
+  @media only screen and (min-width: 992px) {
     body {
-      font-size: 2em; } }
+      font-size: 14px; } }
 
 .container-padding {
   padding: 10px; }
@@ -23,18 +24,18 @@ body {
   .navbar .navbar-form {
     border: none; }
     .navbar .navbar-form input[type=text] {
-      width: 430px; }
-      @media screen and (max-width: 992px) {
+      width: auto; }
+      @media only screen and (min-width: 768px) {
         .navbar .navbar-form input[type=text] {
           width: 330px; } }
-      @media screen and (max-width: 767px) {
+      @media only screen and (min-width: 992px) {
         .navbar .navbar-form input[type=text] {
-          width: auto; } }
+          width: 430px; } }
 
 .card {
+  height: auto;
   background-color: #fff;
   margin: 10px 0 20px 0;
-  height: 300px;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.2);
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); }
   .card:hover {
@@ -45,25 +46,25 @@ body {
       display: block; }
     .card:hover .info-holder {
       top: -50px; }
-  @media screen and (max-width: 992px) {
+  @media only screen and (min-width: 768px) {
     .card {
       height: 370px; } }
-  @media screen and (max-width: 767px) {
+  @media only screen and (min-width: 992px) {
     .card {
-      height: auto; } }
+      height: 300px; } }
 
 .profile-img-holder {
-  height: 185px;
-  overflow: hidden; }
+  overflow: hidden;
+  height: auto; }
   .profile-img-holder img {
     width: 100%;
     padding: 10px; }
-  @media screen and (max-width: 992px) {
+  @media only screen and (min-width: 768px) {
     .profile-img-holder {
       height: 240px; } }
-  @media screen and (max-width: 767px) {
+  @media only screen and (min-width: 992px) {
     .profile-img-holder {
-      height: auto; } }
+      height: 185px; } }
 
 .info-holder {
   position: relative;
